@@ -1,0 +1,16 @@
+{
+    "name": "simple-webproxy",
+    "version": "0.0.1",
+    "description": "Simple web proxy service, enable you to do the proxy via website.",
+    "main": "app.js",
+    "dependencies": {
+        "body-parser": "^1.12.4",
+        "express": "^4.12.4",
+        "request": "^2.55.0"
+    },
+    "scripts": {
+    "start": "node app.js"
+    },
+    "author": "GYZheng, http://gyzlab.com",
+    "license": "MIT"
+}
