@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
         try{
             var href = hrefs[i].href;
-            //如果是絕對路徑   http開頭
+            //handle aboulute path  start with http/https
             if(href.indexOf("http")!=-1)
             {
-                //如果是自動由domain生成的，要處理
+                //handle the case that start with wrong domain(proxy domain)
                 if(href.indexOf(document.location.host)!=-1)
                 {
                     console.log("Handle ABS path, but domain error => "+href);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     hrefs[i].setAttribute('href',"http://"+document.location.host+"/url/"+url);
                 }
             }
-            //如果是相對路徑
+            //handle relative path => UNHANDLING!
             else
             {
                 console.log("Unhandling Relative path "+href);
